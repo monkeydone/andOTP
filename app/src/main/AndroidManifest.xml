@@ -21,6 +21,7 @@
         <activity
             android:name=".Activities.MainActivity"
             android:label="@string/app_name"
+            android:exported="true"
             android:theme="@style/AppTheme.NoActionBar"
             android:configChanges="orientation|screenSize|screenLayout|keyboardHidden|keyboard">
             <intent-filter>
@@ -45,27 +46,36 @@
         </activity>
         <activity
             android:name=".Activities.AboutActivity"
+            android:exported="true"
             android:parentActivityName=".Activities.MainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Activities.AuthenticateActivity"
+            android:exported="true"
             android:parentActivityName=".Activities.MainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Activities.BackupActivity"
+            android:exported="true"
             android:parentActivityName=".Activities.MainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Activities.IntroScreenActivity"
             android:screenOrientation="portrait"
+            android:exported="true"
             android:parentActivityName=".Activities.MainActivity"
             android:theme="@style/Theme.Intro.Solid" />
         <activity
             android:name=".Activities.SettingsActivity"
+            android:exported="true"
             android:parentActivityName=".Activities.MainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Activities.SecureCaptureActivity" />
+        <activity android:name=".Activities.SecureCaptureActivity"
+            android:exported="true"
+            />
         <activity
+
+            android:exported="true"
             android:name=".Activities.PanicResponderActivity"
             android:launchMode="singleInstance"
             android:noHistory="true"
@@ -76,13 +86,17 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name=".Receivers.PlainTextBackupBroadcastReceiver">
+        <receiver
+            android:exported="true"
+            android:name=".Receivers.PlainTextBackupBroadcastReceiver">
             <intent-filter>
                 <action android:name="org.shadowice.flocke.andotp.broadcast.PLAIN_TEXT_BACKUP" />
             </intent-filter>
         </receiver>
 
-        <receiver android:name=".Receivers.EncryptedBackupBroadcastReceiver">
+        <receiver
+            android:exported="true"
+            android:name=".Receivers.EncryptedBackupBroadcastReceiver">
             <intent-filter>
                 <action android:name="org.shadowice.flocke.andotp.broadcast.ENCRYPTED_BACKUP" />
             </intent-filter>
