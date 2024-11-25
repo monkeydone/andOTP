@@ -7,7 +7,7 @@ android {
     defaultConfig {
         applicationId "org.shadowice.flocke.andotp"
         minSdkVersion 22
-        targetSdkVersion 31
+        targetSdkVersion 30
         versionCode 39
         versionName "0.9.0.1"
         vectorDrawables.useSupportLibrary = true
@@ -44,6 +44,7 @@ android {
             versionNameSuffix = "-play"
         }
     }
+
     compileOptions {
         // Flag to enable support for the new language APIs
         coreLibraryDesugaringEnabled true
@@ -51,6 +52,7 @@ android {
         // Sets Java compatibility to Java 8
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+
     }
 }
 
@@ -66,16 +68,19 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-process:${lifecycle_version}"
     implementation "androidx.lifecycle:lifecycle-common-java8:${lifecycle_version}"
     implementation 'com.google.android.material:material:1.3.0'
+    implementation project(":library")
 
     //noinspection GradleDependency - because they messed up their version numbering
     implementation "commons-codec:commons-codec:1.15"
-    implementation "com.github.aakira:expandable-layout:1.6.0"
+//    implementation "com.github.aakira:expandable-layout:1.6.0"
     implementation "com.heinrichreimersoftware:material-intro:2.0.0"
     implementation("com.journeyapps:zxing-android-embedded:4.1.0") { transitive = false }
     implementation('com.google.zxing:core:3.4.1')
     implementation "me.zhanghai.android.materialprogressbar:library:1.6.1"
     implementation "com.github.open-keychain.open-keychain:openpgp-api:v5.7.1"
-    implementation "com.leinardi.android:speed-dial:3.1.1"
+//    implementation "com.leinardi.android:speed-dial:3.1.1"
+    implementation "com.leinardi.android:speed-dial:3.3.0"
+
     implementation "com.mikepenz:aboutlibraries:6.2.3" // Supporting a newer version will need some work
 
     androidTestImplementation "androidx.test.espresso:espresso-core:3.3.0"

@@ -39,6 +39,7 @@ import com.mikepenz.aboutlibraries.LibsBuilder;
 import org.shadowice.flocke.andotp.Fragments.AboutFragment;
 import org.shadowice.flocke.andotp.R;
 
+@SuppressWarnings("deprecation")
 public class AboutActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {

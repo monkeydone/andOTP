@@ -23,6 +23,7 @@
 
 package org.shadowice.flocke.andotp.Utilities;
 
+import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Context;
@@ -75,7 +76,7 @@ public class NotificationHelper {
     }
 
     public static void notify(Context context, Constants.NotificationChannel channel , int resIdTitle, String resBody) {
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(context, null)
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(context, (Notification) null)
                 .setSmallIcon(R.mipmap.ic_launcher)
                 .setContentTitle(context.getText(resIdTitle))
                 .setStyle(new NotificationCompat.BigTextStyle()
